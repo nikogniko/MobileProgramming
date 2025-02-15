@@ -1,0 +1,55 @@
+# Visual Studio файли
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Бінарні та компільовані файли
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.app
+*.ipa
+*.so
+*.dylib
+*.a
+*.o
+*.idb
+*.pdb
+
+# Кеші та налаштування
+*.cache
+*.ilk
+*.log
+*.csproj.user
+*.pidb
+*.suo
+*.sln.docstates
+
+# Папки для Android/iOS
+platforms/android/.gradle/
+platforms/android/.idea/
+platforms/android/local.properties
+platforms/android/app/bin/
+platforms/android/app/build/
+platforms/ios/DerivedData/
+platforms/ios/Pods/
+platforms/ios/build/
+platforms/ios/xcuserdata/
+
+# Сертифікати iOS (якщо є)
+*.mobileprovision
+*.xcworkspace
+
+# NuGet кеш та пакети
+*.nupkg
+packages/
+project.lock.json
+project.assets.json
+
+# Файли та каталоги для Mac/Linux
+.DS_Store
+
