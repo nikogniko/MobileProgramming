@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab_2_Mobile.MainPage"
+             Title="Калькулятор">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,50,30,0"
+            Spacing="25">
+
+            <Entry x:Name="Number1" Placeholder="Введіть перше число" Keyboard="Numeric" FontSize="18"/>
+
+            <Grid ColumnDefinitions="*, *, *, *, *, *" ColumnSpacing="10">
+                <Button Text="+" Grid.Column="0" Clicked="OnOperatorClicked"/>
+                <Button Text="-" Grid.Column="1" Clicked="OnOperatorClicked"/>
+                <Button Text="*" Grid.Column="2" Clicked="OnOperatorClicked"/>
+                <Button Text="/" Grid.Column="3" Clicked="OnOperatorClicked"/>
+                <Button Text="%" Grid.Column="4" Clicked="OnOperatorClicked"/>
+                <Button Text="^" Grid.Column="5" Clicked="OnOperatorClicked"/>
+            </Grid>
+
+            <Entry x:Name="Number2" Placeholder="Введіть друге число" Keyboard="Numeric" FontSize="18"/>
+
+            <HorizontalStackLayout Padding="0,20">
+                <Label Text="Результат:  " FontSize="18" VerticalTextAlignment="Center"/>
+                <Entry x:Name="ResultOutput" IsReadOnly="True" FontSize="18" MinimumWidthRequest="220" HorizontalTextAlignment="Center"/>
+            </HorizontalStackLayout>
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10" Padding="0,20">
+                <Button Text="Очистити" Grid.Column="0" Clicked="OnClearClicked" FontAttributes="Bold"/>
+                <Button Text="Вихід" Grid.Column="1" Clicked="OnExitClicked" FontAttributes="Bold"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
