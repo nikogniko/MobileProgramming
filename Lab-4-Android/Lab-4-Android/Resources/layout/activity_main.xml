@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/backgroundColor">
+
+    <!-- Перший текстовий елемент -->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView 1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" 
+        android:textColor="@color/textColor"
+/>
+
+    <!-- Другий текстовий елемент -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView 2"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true" 
+        android:textColor="@color/textColor"
+        />
+
+    <!-- Третій текстовий елемент -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView 3"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentEnd="true" 
+        android:textColor="@color/textColor"
+        />
+
+    <!-- Кнопка -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click me"
+        android:layout_below="@id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" 
+        android:backgroundTint="@color/buttonBgColor"
+        android:textColor="@color/buttonTextColor"
+        />
+
+    <!--Дефолтний текстовий елемент розташований 
+    по центру відносно батьківського-->
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/app_text"
+        android:textColor="@color/textColor"
+    />
+
+    <!--перемикач лейаутів -->
+    <Button
+        android:id="@+id/switchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch Layout"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp" 
+        android:backgroundTint="@color/buttonBgColor"
+        android:textColor="@color/buttonTextColor"
+        />
+</RelativeLayout>
