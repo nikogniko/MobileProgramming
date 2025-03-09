@@ -1,7 +1,4 @@
-﻿using System;
-using Microsoft.Maui.Controls;
-
-namespace Lab_2_Mobile
+﻿namespace Lab_2_Mobile
 {
     public partial class MainPage : ContentPage
     {
@@ -92,5 +89,4 @@ namespace Lab_2_Mobile
             System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
     }
-
 }
