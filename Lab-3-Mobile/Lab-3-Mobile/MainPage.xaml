@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab_3_Mobile.MainPage"
+             Title="Калькулятор">
+
+    <ScrollView>
+        <AbsoluteLayout>
+            <VerticalStackLayout Padding="20" Spacing="20">
+                <Image Source="algebra.png"
+                    WidthRequest="70"
+                    HeightRequest="70"
+                    Margin="0,0,0,20"/>
+
+                <!-- Поле вводу першого числа -->
+                <Entry x:Name="Number1" Placeholder="Введіть перше число" Keyboard="Numeric" FontSize="18"/>
+
+                <!-- Рядок кнопок операцій -->
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button Text="+" Clicked="OnOperatorClicked"/>
+                    <Button Text="-" Clicked="OnOperatorClicked"/>
+                    <Button Text="*" Clicked="OnOperatorClicked"/>
+                    <Button Text="/" Clicked="OnOperatorClicked"/>
+                    <Button Text="%" Clicked="OnOperatorClicked"/>
+                    <Button Text="^" Clicked="OnOperatorClicked"/>
+                </HorizontalStackLayout>
+
+                <!-- Поле вводу другого числа -->
+                <Entry x:Name="Number2" Placeholder="Введіть друге число" Keyboard="Numeric" FontSize="18"/>
+
+                <!-- Відображення результату -->
+                <HorizontalStackLayout Padding="5, 10" Spacing="10">
+                    <Label Text="Результат: " FontSize="18" VerticalTextAlignment="Center"/>
+                    <Entry x:Name="ResultOutput" IsReadOnly="True" FontSize="18" MinimumWidthRequest="220" HorizontalTextAlignment="Center"/>
+                </HorizontalStackLayout>
+
+                <!-- Кнопки "Очистити" та "Вихід" -->
+                <HorizontalStackLayout Spacing="10" Padding="0,10">
+                    <Button x:Name="clearButton" Text="Очистити" Clicked="OnClearClicked" FontAttributes="Bold"/>
+                    <Button x:Name="exitButton" Text="Вихід" Clicked="OnExitClicked" FontAttributes="Bold"/>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </AbsoluteLayout>
+    </ScrollView>
+    
+</ContentPage>
