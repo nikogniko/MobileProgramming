@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    android:padding="16dp"
+    android:background="@color/backgroundColor">
+
+    <!-- Рядок заголовків -->
+    <TableRow
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:paddingTop="100dp">
+        <TextView
+            android:text="Column 1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp" 
+            android:textStyle="bold"
+            android:textColor="@color/textColor"/>
+        <TextView
+            android:text="Column 2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp" 
+            android:textStyle="bold"
+            android:textColor="@color/textColor"/>
+        <TextView
+            android:text="Column 3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp" 
+            android:textStyle="bold"
+            android:textColor="@color/textColor"/>
+    </TableRow>
+
+    <!--Рядок, в клітинку якого вкладений ще один лейаут-->
+    <TableRow
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content" 
+    android:gravity="center">
+        <TextView
+            android:text=""
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"   
+            android:padding="8dp" />
+        <TextView
+            android:text="Some text"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1"
+            android:padding="8dp"            
+            android:textColor="@color/textColor"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0.dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="Btn 1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:backgroundTint="@color/buttonBgColor"
+                android:textColor="@color/buttonTextColor"                
+                />
+            <Button
+                android:text="Btn 2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:backgroundTint="@color/buttonBgColor"
+                android:textColor="@color/buttonTextColor"                
+                />
+        </LinearLayout>
+    </TableRow>
+
+    <!-- Рядок з кнопкою-перемикачем та об’єднаною клітинкою -->
+    <TableRow
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+        <Button
+            android:id="@+id/switchButton"
+            android:text="Next layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="8dp" 
+            android:backgroundTint="@color/buttonBgColor"
+            android:textColor="@color/buttonTextColor"                
+            />
+        <TextView
+            android:text=""
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <!-- Рядок з полем вводу та кнопкою-->
+    <TableRow
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+        android:layout_weight="4"
+        android:gravity="bottom"
+        android:paddingBottom="60dp">
+        <EditText
+            android:hint="Enter text"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_span="2" 
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+        <Button
+            android:text="Submit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="8dp" 
+            android:backgroundTint="@color/buttonBgColor"
+            android:textColor="@color/buttonTextColor"                
+            />
+    </TableRow>
+
+    <!-- Футер, який займає всю ширину -->
+    <TableRow
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+        <TextView
+            android:text="Footer information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_span="3" 
+            android:textColor="@color/textColor"/>
+    </TableRow>
+</TableLayout>

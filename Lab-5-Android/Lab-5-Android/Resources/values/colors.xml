@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<!-- Фон: світло-рожевий -->
+	<color name="backgroundColor">#ffd9e6</color>
+	<!-- Текст: фіолетовий -->
+	<color name="textColor">#AB47BC</color>
+	<!-- Кнопка: яскраво-рожевий -->
+	<color name="buttonBgColor">#AB47BC</color>
+	<color name="buttonTextColor">#FFFFFF</color>
+
+</resources>
