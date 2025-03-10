@@ -16,8 +16,8 @@
         android:text="TextView 1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" 
-        android:textColor="@color/textColor"
-/>
+        android:paddingTop="100dp"
+        android:textColor="@color/textColor"/>
 
     <!-- Другий текстовий елемент -->
     <TextView

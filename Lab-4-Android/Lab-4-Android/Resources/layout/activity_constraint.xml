@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout 
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1"
+    android:paddingTop="100dp" 
+    android:background="@color/backgroundColor"
+    >
+    
+    <androidx.constraintlayout.widget.ConstraintLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/backgroundColor">
+    android:padding="16dp">
 
     <!-- Перший текстовий елемент: верх по центру -->
     <TextView
@@ -81,3 +92,4 @@
         android:textColor="@color/buttonTextColor"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
