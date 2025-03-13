@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab_6_Mobile.SecondPage"
+             Title="Завдання 2. Табуляція">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+
+            <Label Text="y = sin(x)" 
+        FontSize="18" 
+        HorizontalOptions="Center"
+        Margin="0"/>
+
+            <Label Text="Введіть параметри для табуляції:" 
+           FontSize="18" 
+           HorizontalOptions="Center"
+           Margin="0,20"/>
+
+            <!-- Поля для введення меж і кроку -->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Entry x:Name="EntryXStart" Placeholder="X початок" Keyboard="Numeric" WidthRequest="110"/>
+                <Entry x:Name="EntryXEnd" Placeholder="X кінець" Keyboard="Numeric" WidthRequest="110"/>
+                <Entry x:Name="EntryStep" Placeholder="Крок" Keyboard="Numeric" WidthRequest="105"/>
+            </HorizontalStackLayout>
+
+            <!-- Кнопки -->
+            <HorizontalStackLayout Spacing="20" Margin="0, 30" HorizontalOptions="Center">
+                <Button x:Name="calcBtn" Text="Обчислити" FontAttributes="Bold" Clicked="OnCalculateClicked"/>
+                <Button x:Name="exitBtn" Text="Вихід" FontAttributes="Bold" Clicked="OnExitClicked"/>
+            </HorizontalStackLayout>
+
+            <!-- Таблиця Grid -->
+            <ScrollView>
+                <Grid x:Name="ResultGrid"
+              ColumnDefinitions="*,*"
+              RowSpacing="5"
+              ColumnSpacing="5"
+              Padding="10"
+              BackgroundColor="MediumPurple"
+              IsVisible="False" >
+                </Grid>
+            </ScrollView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
