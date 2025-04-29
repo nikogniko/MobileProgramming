@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Lab_8_Mobile.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Library">
+
+    <VerticalStackLayout Padding="10" Spacing="10">
+
+        <!-- Кнопки для вибору умов -->
+        <Button Text="Усі книги" Clicked="OnShowAll" TextColor="White" BackgroundColor="MediumOrchid" Margin="10, 0"/>
+
+
+        <HorizontalStackLayout Spacing="8" HorizontalOptions="Center"  Padding="0, 0, 0, 20">
+            <Button Text="Після 2000 р."     Clicked="OnAfter2000"     TextColor="White" BackgroundColor="MediumOrchid"/>
+            <Button Text="Fantasy > 3"       Clicked="OnFantasy"       TextColor="White" BackgroundColor="MediumOrchid"/>
+            <Button Text="К-сть за жанром"   Clicked="OnCountPerGenre" TextColor="White" BackgroundColor="MediumOrchid"/>
+
+        </HorizontalStackLayout>
+
+        <!-- Таблиця книжок -->
+        <ScrollView Orientation="Both" IsVisible="{Binding ShowBooks}">
+            <CollectionView
+          ItemsSource="{Binding Books}"
+          SelectionMode="None">
+                <CollectionView.Header>
+                    <Grid ColumnDefinitions="50,120,200,150,120,100,100"
+                BackgroundColor="DarkMagenta"
+                Padding="8">
+                        <Label Text="Id" FontAttributes="Bold" />
+                        <Label Text="ISBN"        FontAttributes="Bold" Grid.Column="1"/>
+                        <Label Text="Title"       FontAttributes="Bold" Grid.Column="2"/>
+                        <Label Text="Author"      FontAttributes="Bold" Grid.Column="3"/>
+                        <Label Text="Published"   FontAttributes="Bold" Grid.Column="4"/>
+                        <Label Text="Genre"       FontAttributes="Bold" Grid.Column="5"/>
+                        <Label Text="Copies"      FontAttributes="Bold" Grid.Column="6"/>
+                    </Grid>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="50,120,200,150,120,100,100" Padding="8">
+                            <Label Text="{Binding Id}"              Grid.Column="0" />
+                            <Label Text="{Binding ISBN}"            Grid.Column="1" />
+                            <Label Text="{Binding Title}"           Grid.Column="2" />
+                            <Label Text="{Binding Author}"          Grid.Column="3" />
+                            <Label Text="{Binding PublishDate}"     Grid.Column="4" />
+                            <Label Text="{Binding Genre}"           Grid.Column="5" />
+                            <Label Text="{Binding CopiesAvailable}" Grid.Column="6" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+
+        <!-- Таблиця «Genre–Count» -->
+        <CollectionView
+        ItemsSource="{Binding GenreCounts}"
+        IsVisible="{Binding ShowCounts}"
+        SelectionMode="None">
+            <CollectionView.Header>
+                <Grid ColumnDefinitions="*,Auto" BackgroundColor="DarkMagenta" Padding="8">
+                    <Label Text="Жанр"       FontAttributes="Bold" />
+                    <Label Text="Кількість" FontAttributes="Bold" Grid.Column="1"/>
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,Auto" Padding="8">
+                        <Label Text="{Binding Genre}"     />
+                        <Label Text="{Binding Count}"     Grid.Column="1"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>
