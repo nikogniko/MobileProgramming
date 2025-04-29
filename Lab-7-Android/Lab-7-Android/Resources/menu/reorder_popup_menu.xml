@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:id="@+id/popup_sort_asc"
+		android:title="За зростанням А-Я" />
+	<item
+		android:id="@+id/popup_sort_desc"
+		android:title="За спаданням Я-А" />
+	<item
+		android:id="@+id/popup_sort_default"
+		android:title="За замовчуванням" />
+</menu>

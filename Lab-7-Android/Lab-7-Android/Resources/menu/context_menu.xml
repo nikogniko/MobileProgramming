@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/menu_red"     android:title="Червоний" />
+	<item android:id="@+id/menu_green"   android:title="Зелений" />
+	<item android:id="@+id/menu_blue"    android:title="Синій" />
+	<item android:id="@+id/menu_purple"  android:title="Фіолетовий" />
+	<item android:id="@+id/menu_default" android:title="За замовчуванням" />
+</menu>

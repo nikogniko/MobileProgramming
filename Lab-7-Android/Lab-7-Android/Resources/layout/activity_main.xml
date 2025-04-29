@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:fitsSystemWindows="true">
+
+	<!-- Верхній рівень: FrameLayout займає весь екран -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:padding="20dp">
+		
+		<TextView
+			android:id="@+id/textViewDummy"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Натисніть ⋮ у правому верхньому куті"
+			android:textSize="18sp"
+			android:padding="12dp"/>
+
+		<TextView
+			android:id="@+id/textViewColor"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Довгий тап сюди викликає меню зміни кольору"
+			android:textSize="18sp"
+			android:padding="12dp" />
+
+		<ListView
+		  android:id="@+id/listViewItems"
+		  android:layout_width="match_parent"
+		  android:layout_height="match_parent"
+		  android:choiceMode="none" />
+		
+	</LinearLayout>
+</FrameLayout>

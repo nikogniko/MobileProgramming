@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<!-- Базова тема вашого застосунку, наслідує від AppCompat -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<!-- Можна вказати свій колір ActionBar, статус-бару тощо -->
+		<item name="colorPrimary">#2196F3</item>
+		<item name="colorPrimaryDark">#1976D2</item>
+		<item name="colorAccent">#FF4081</item>
+	</style>
+</resources>
